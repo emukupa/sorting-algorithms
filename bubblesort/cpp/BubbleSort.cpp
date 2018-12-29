@@ -23,11 +23,12 @@ void swap(int *i, int *j)
 void bubble(int arr[], int len)
 {
   bool isSorted = false;
+  int lastSorted = len - 1;
 
   for (int i = 0; i < len; i++)
   {
     isSorted = true;
-    for (int j = 0; j < len - 1; j++)
+    for (int j = 0; j < lastSorted; j++)
     {
       if (arr[j] > arr[j + 1])
       {
@@ -39,6 +40,7 @@ void bubble(int arr[], int len)
     {
       break;
     }
+    lastSorted--;
   }
 }
 
